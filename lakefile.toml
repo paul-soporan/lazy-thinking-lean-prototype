@@ -1,0 +1,14 @@
+name = "lazy-thinking-lean"
+version = "0.2.0"
+defaultTargets = ["LazyThinking", "lazy-thinking-demo"]
+
+[[lean_lib]]
+name = "LazyThinking"
+
+[[lean_exe]]
+name = "lazy-thinking-demo"
+root = "Main"
+
+[[lean_exe]]
+name = "lazy-thinking-tests"
+root = "Tests"

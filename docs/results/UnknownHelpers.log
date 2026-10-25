@@ -1,0 +1,16 @@
+tests/UnknownHelpers.lean:6:45: error: unsolved goals
+case split
+left right : Splitter
+combine : Combiner
+⊢ SplitContract left right
+
+case merge
+left right : Splitter
+combine : Combiner
+⊢ CombineContract combine
+[LazyThinking.Search] {"candidate":"","detail":"Start finite candidate search.","goals":["left right : Splitter\ncombine : Combiner\n⊢ SchemeRequirements left right combine"],"stage":"attempt"}
+[LazyThinking.Search] {"candidate":"unconditional","detail":"Generated obligations; no premise is assumed true.","goals":["case split\nleft right : Splitter\ncombine : Combiner\n⊢ SplitContract left right","case merge\nleft right : Splitter\ncombine : Combiner\n⊢ CombineContract combine"],"stage":"candidate"}
+[LazyThinking.Search] {"candidate":"unconditional","detail":"Unproved premises; this is not a refutation of the candidate.","goals":["case split\nleft right : Splitter\ncombine : Combiner\n⊢ SplitContract left right","case merge\nleft right : Splitter\ncombine : Combiner\n⊢ CombineContract combine"],"stage":"candidate_unresolved"}
+[LazyThinking.Search] {"candidate":"separated","detail":"Generated obligations; no premise is assumed true.","goals":["case split\nleft right : Splitter\ncombine : Combiner\n⊢ SplitContract left right","case establish\nleft right : Splitter\ncombine : Combiner\n⊢ GuardOnSplit left right Separated","case transport\nleft right : Splitter\ncombine : Combiner\n⊢ GuardTransport Separated","case merge\nleft right : Splitter\ncombine : Combiner\n⊢ GuardedCombineContract Separated combine"],"stage":"candidate"}
+[LazyThinking.Search] {"candidate":"separated","detail":"Unproved premises; this is not a refutation of the candidate.","goals":["case split\nleft right : Splitter\ncombine : Combiner\n⊢ SplitContract left right","case establish\nleft right : Splitter\ncombine : Combiner\n⊢ GuardOnSplit left right Separated","case merge\nleft right : Splitter\ncombine : Combiner\n⊢ GuardedCombineContract Separated combine"],"stage":"candidate_unresolved"}
+[LazyThinking.Search] {"candidate":"unconditional","detail":"Search exhausted; retain the candidate with fewest open premises.","goals":["case split\nleft right : Splitter\ncombine : Combiner\n⊢ SplitContract left right","case merge\nleft right : Splitter\ncombine : Combiner\n⊢ CombineContract combine"],"stage":"unresolved"}

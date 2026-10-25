@@ -1,0 +1,3 @@
+PASS: 1365 exhaustive inputs plus 6 stress cases for BOTH sorting programs.
+PASS: 2742 specification checks, plus agreement of the two outputs.
+PASS: negative counterexamples, conditional rules, and backtracking proofs checked.

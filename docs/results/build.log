@@ -1,0 +1,5 @@
+✔ [29/34] Built Main (2.3s)
+✔ [30/34] Built Main:c.o (372ms)
+✔ [31/34] Built Tests (2.7s)
+✔ [34/34] Built «lazy-thinking-demo»:exe (932ms)
+Build completed successfully (34 jobs).

@@ -1,0 +1,7 @@
+tests/FixedBaseline.lean:5:69: error: unsolved goals
+case merge
+⊢ CombineContract concatenate
+[LazyThinking] {"detail":"Try assumptions and logical simplification without new requirements.","goals":["⊢ SchemeRequirements minimumLeft minimumRight concatenate"],"stage":"attempt"}
+[LazyThinking] {"detail":"The bounded proof attempt did not establish the joint requirement.","goals":["⊢ SchemeRequirements minimumLeft minimumRight concatenate"],"stage":"stalled"}
+[LazyThinking] {"detail":"Apply the supplied concatenation/permutation decomposition rule.","goals":["case split\n⊢ SplitContract minimumLeft minimumRight","case merge\n⊢ CombineContract concatenate"],"stage":"requirements"}
+[LazyThinking] {"detail":"Remaining requirements are Lean goals; the theorem is not proved.","goals":["case merge\n⊢ CombineContract concatenate"],"stage":"unresolved"}

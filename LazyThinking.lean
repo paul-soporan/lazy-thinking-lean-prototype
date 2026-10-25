@@ -1,0 +1,10 @@
+import LazyThinking.Spec
+import LazyThinking.Decomposition
+import LazyThinking.Scheme
+import LazyThinking.Witness
+import LazyThinking.Guards
+import LazyThinking.Tactic
+import LazyThinking.Candidates
+import LazyThinking.Search
+import LazyThinking.MinimumSplit
+import LazyThinking.DerivedPrograms

@@ -1,0 +1,9 @@
+tests/NoTransport.lean:5:69: error: unsolved goals
+case merge
+⊢ CombineContract concatenate
+[LazyThinking.Search] {"candidate":"","detail":"Start finite candidate search.","goals":["⊢ SchemeRequirements minimumLeft minimumRight concatenate"],"stage":"attempt"}
+[LazyThinking.Search] {"candidate":"unconditional","detail":"Generated obligations; no premise is assumed true.","goals":["case split\n⊢ SplitContract minimumLeft minimumRight","case merge\n⊢ CombineContract concatenate"],"stage":"candidate"}
+[LazyThinking.Search] {"candidate":"unconditional","detail":"Unproved premises; this is not a refutation of the candidate.","goals":["case merge\n⊢ CombineContract concatenate"],"stage":"candidate_unresolved"}
+[LazyThinking.Search] {"candidate":"separated","detail":"Generated obligations; no premise is assumed true.","goals":["case split\n⊢ SplitContract minimumLeft minimumRight","case establish\n⊢ GuardOnSplit minimumLeft minimumRight Separated","case transport\n⊢ GuardTransport Separated","case merge\n⊢ GuardedCombineContract Separated concatenate"],"stage":"candidate"}
+[LazyThinking.Search] {"candidate":"separated","detail":"Unproved premises; this is not a refutation of the candidate.","goals":["case transport\n⊢ GuardTransport Separated"],"stage":"candidate_unresolved"}
+[LazyThinking.Search] {"candidate":"unconditional","detail":"Search exhausted; retain the candidate with fewest open premises.","goals":["case merge\n⊢ CombineContract concatenate"],"stage":"unresolved"}

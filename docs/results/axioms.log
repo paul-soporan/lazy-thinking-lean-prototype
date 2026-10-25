@@ -1,0 +1,23 @@
+'LazyThinking.joint_of_contracts' does not depend on any axioms
+'LazyThinking.scheme_of_contracts' does not depend on any axioms
+'LazyThinking.sortUsing_correct' depends on axioms: [propext, Quot.sound]
+'LazyThinking.halfSplit_contract' depends on axioms: [propext, Quot.sound]
+'LazyThinking.mergeNat_contract' depends on axioms: [propext, Quot.sound]
+'LazyThinking.mergeSort_correct' depends on axioms: [propext, Quot.sound]
+'LazyThinking.separation_survives' depends on axioms: [propext]
+'LazyThinking.joint_of_guarded_contracts' does not depend on any axioms
+'LazyThinking.scheme_of_guarded_contracts' does not depend on any axioms
+'LazyThinking.separation_transport' depends on axioms: [propext]
+'LazyThinking.concatenate_guarded_contract' depends on axioms: [propext, Quot.sound]
+'LazyThinking.minimumValue_mem' depends on axioms: [propext]
+'LazyThinking.minimumValue_le' depends on axioms: [propext, Quot.sound]
+'LazyThinking.minimumSplit_contract' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LazyThinking.minimumSplit_separated' depends on axioms: [propext, Quot.sound]
+'LazyThinking.selectedMergeRequirements' depends on axioms: [propext, Quot.sound]
+'LazyThinking.selectedMinimumRequirements' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LazyThinking.minimumPartitionSort_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LazyThinking.halfSplit_concat_wrong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LazyThinking.rawMinimum_contents' depends on axioms: [propext]
+'LazyThinking.rawMinimum_separated' depends on axioms: [propext, Quot.sound]
+'LazyThinking.rawMinimum_does_not_decrease' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LazyThinking.lengths_and_sortedness_are_insufficient' does not depend on any axioms

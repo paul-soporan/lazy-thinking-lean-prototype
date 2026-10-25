@@ -1,0 +1,766 @@
+{
+  "lean_version": "Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+  "project_version": "0.2.0",
+  "runtime_inputs_per_program": 1371,
+  "runtime_specification_checks": 2742,
+  "selected_candidates": [
+    "unconditional",
+    "separated",
+    "unconditional"
+  ],
+  "positive_search_events": [
+    [
+      {
+        "candidate": "",
+        "detail": "Start finite candidate search.",
+        "goals": [
+          "⊢ SchemeRequirements leftHalf rightHalf mergeNat"
+        ],
+        "stage": "attempt"
+      },
+      {
+        "candidate": "unconditional",
+        "detail": "Generated obligations; no premise is assumed true.",
+        "goals": [
+          "case split\n⊢ SplitContract leftHalf rightHalf",
+          "case merge\n⊢ CombineContract mergeNat"
+        ],
+        "stage": "candidate"
+      },
+      {
+        "candidate": "unconditional",
+        "detail": "All candidate premises discharged; checked proof constructed.",
+        "goals": [],
+        "stage": "selected"
+      },
+      {
+        "candidate": "unconditional",
+        "detail": "The goal has a checked proof.",
+        "goals": [],
+        "stage": "complete"
+      }
+    ],
+    [
+      {
+        "candidate": "",
+        "detail": "Start finite candidate search.",
+        "goals": [
+          "⊢ SchemeRequirements minimumLeft minimumRight concatenate"
+        ],
+        "stage": "attempt"
+      },
+      {
+        "candidate": "unconditional",
+        "detail": "Generated obligations; no premise is assumed true.",
+        "goals": [
+          "case split\n⊢ SplitContract minimumLeft minimumRight",
+          "case merge\n⊢ CombineContract concatenate"
+        ],
+        "stage": "candidate"
+      },
+      {
+        "candidate": "unconditional",
+        "detail": "Unproved premises; this is not a refutation of the candidate.",
+        "goals": [
+          "case merge\n⊢ CombineContract concatenate"
+        ],
+        "stage": "candidate_unresolved"
+      },
+      {
+        "candidate": "separated",
+        "detail": "Generated obligations; no premise is assumed true.",
+        "goals": [
+          "case split\n⊢ SplitContract minimumLeft minimumRight",
+          "case establish\n⊢ GuardOnSplit minimumLeft minimumRight Separated",
+          "case transport\n⊢ GuardTransport Separated",
+          "case merge\n⊢ GuardedCombineContract Separated concatenate"
+        ],
+        "stage": "candidate"
+      },
+      {
+        "candidate": "separated",
+        "detail": "All candidate premises discharged; checked proof constructed.",
+        "goals": [],
+        "stage": "selected"
+      },
+      {
+        "candidate": "separated",
+        "detail": "The goal has a checked proof.",
+        "goals": [],
+        "stage": "complete"
+      }
+    ],
+    [
+      {
+        "candidate": "",
+        "detail": "Start finite candidate search.",
+        "goals": [
+          "⊢ SchemeRequirements minimumLeft minimumRight mergeNat"
+        ],
+        "stage": "attempt"
+      },
+      {
+        "candidate": "unconditional",
+        "detail": "Generated obligations; no premise is assumed true.",
+        "goals": [
+          "case split\n⊢ SplitContract minimumLeft minimumRight",
+          "case merge\n⊢ CombineContract mergeNat"
+        ],
+        "stage": "candidate"
+      },
+      {
+        "candidate": "unconditional",
+        "detail": "All candidate premises discharged; checked proof constructed.",
+        "goals": [],
+        "stage": "selected"
+      },
+      {
+        "candidate": "unconditional",
+        "detail": "The goal has a checked proof.",
+        "goals": [],
+        "stage": "complete"
+      }
+    ]
+  ],
+  "fixed_rule_events": [
+    {
+      "detail": "Try assumptions and logical simplification without new requirements.",
+      "goals": [
+        "⊢ SchemeRequirements leftHalf rightHalf mergeNat"
+      ],
+      "stage": "attempt"
+    },
+    {
+      "detail": "The bounded proof attempt did not establish the joint requirement.",
+      "goals": [
+        "⊢ SchemeRequirements leftHalf rightHalf mergeNat"
+      ],
+      "stage": "stalled"
+    },
+    {
+      "detail": "Apply the supplied concatenation/permutation decomposition rule.",
+      "goals": [
+        "case split\n⊢ SplitContract leftHalf rightHalf",
+        "case merge\n⊢ CombineContract mergeNat"
+      ],
+      "stage": "requirements"
+    },
+    {
+      "detail": "Requirements discharged using local assumptions or supplied witnesses.",
+      "goals": [],
+      "stage": "complete"
+    }
+  ],
+  "expected_failure_cases": [
+    {
+      "name": "UnknownHelpers",
+      "expected_unproved_premise": "SplitContract left right",
+      "events": [
+        {
+          "candidate": "",
+          "detail": "Start finite candidate search.",
+          "goals": [
+            "left right : Splitter\ncombine : Combiner\n⊢ SchemeRequirements left right combine"
+          ],
+          "stage": "attempt"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\nleft right : Splitter\ncombine : Combiner\n⊢ SplitContract left right",
+            "case merge\nleft right : Splitter\ncombine : Combiner\n⊢ CombineContract combine"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case split\nleft right : Splitter\ncombine : Combiner\n⊢ SplitContract left right",
+            "case merge\nleft right : Splitter\ncombine : Combiner\n⊢ CombineContract combine"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\nleft right : Splitter\ncombine : Combiner\n⊢ SplitContract left right",
+            "case establish\nleft right : Splitter\ncombine : Combiner\n⊢ GuardOnSplit left right Separated",
+            "case transport\nleft right : Splitter\ncombine : Combiner\n⊢ GuardTransport Separated",
+            "case merge\nleft right : Splitter\ncombine : Combiner\n⊢ GuardedCombineContract Separated combine"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case split\nleft right : Splitter\ncombine : Combiner\n⊢ SplitContract left right",
+            "case establish\nleft right : Splitter\ncombine : Combiner\n⊢ GuardOnSplit left right Separated",
+            "case merge\nleft right : Splitter\ncombine : Combiner\n⊢ GuardedCombineContract Separated combine"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Search exhausted; retain the candidate with fewest open premises.",
+          "goals": [
+            "case split\nleft right : Splitter\ncombine : Combiner\n⊢ SplitContract left right",
+            "case merge\nleft right : Splitter\ncombine : Combiner\n⊢ CombineContract combine"
+          ],
+          "stage": "unresolved"
+        }
+      ]
+    },
+    {
+      "name": "BadCombine",
+      "expected_unproved_premise": "GuardOnSplit leftHalf rightHalf Separated",
+      "events": [
+        {
+          "candidate": "",
+          "detail": "Start finite candidate search.",
+          "goals": [
+            "⊢ SchemeRequirements leftHalf rightHalf concatenate"
+          ],
+          "stage": "attempt"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract leftHalf rightHalf",
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract leftHalf rightHalf",
+            "case establish\n⊢ GuardOnSplit leftHalf rightHalf Separated",
+            "case transport\n⊢ GuardTransport Separated",
+            "case merge\n⊢ GuardedCombineContract Separated concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case establish\n⊢ GuardOnSplit leftHalf rightHalf Separated"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Search exhausted; retain the candidate with fewest open premises.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "unresolved"
+        }
+      ]
+    },
+    {
+      "name": "FixedBaseline",
+      "expected_unproved_premise": "CombineContract concatenate",
+      "events": [
+        {
+          "detail": "Try assumptions and logical simplification without new requirements.",
+          "goals": [
+            "⊢ SchemeRequirements minimumLeft minimumRight concatenate"
+          ],
+          "stage": "attempt"
+        },
+        {
+          "detail": "The bounded proof attempt did not establish the joint requirement.",
+          "goals": [
+            "⊢ SchemeRequirements minimumLeft minimumRight concatenate"
+          ],
+          "stage": "stalled"
+        },
+        {
+          "detail": "Apply the supplied concatenation/permutation decomposition rule.",
+          "goals": [
+            "case split\n⊢ SplitContract minimumLeft minimumRight",
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "requirements"
+        },
+        {
+          "detail": "Remaining requirements are Lean goals; the theorem is not proved.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "unresolved"
+        }
+      ]
+    },
+    {
+      "name": "PlainOnly",
+      "expected_unproved_premise": "CombineContract concatenate",
+      "events": [
+        {
+          "candidate": "",
+          "detail": "Start finite candidate search.",
+          "goals": [
+            "⊢ SchemeRequirements minimumLeft minimumRight concatenate"
+          ],
+          "stage": "attempt"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract minimumLeft minimumRight",
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Search exhausted; retain the candidate with fewest open premises.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "unresolved"
+        }
+      ]
+    },
+    {
+      "name": "NoTransport",
+      "expected_unproved_premise": "GuardTransport Separated",
+      "events": [
+        {
+          "candidate": "",
+          "detail": "Start finite candidate search.",
+          "goals": [
+            "⊢ SchemeRequirements minimumLeft minimumRight concatenate"
+          ],
+          "stage": "attempt"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract minimumLeft minimumRight",
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract minimumLeft minimumRight",
+            "case establish\n⊢ GuardOnSplit minimumLeft minimumRight Separated",
+            "case transport\n⊢ GuardTransport Separated",
+            "case merge\n⊢ GuardedCombineContract Separated concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case transport\n⊢ GuardTransport Separated"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Search exhausted; retain the candidate with fewest open premises.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "unresolved"
+        }
+      ]
+    },
+    {
+      "name": "MissingSplitGuard",
+      "expected_unproved_premise": "GuardOnSplit minimumLeft minimumRight Separated",
+      "events": [
+        {
+          "candidate": "",
+          "detail": "Start finite candidate search.",
+          "goals": [
+            "⊢ SchemeRequirements minimumLeft minimumRight concatenate"
+          ],
+          "stage": "attempt"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract minimumLeft minimumRight",
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract minimumLeft minimumRight",
+            "case establish\n⊢ GuardOnSplit minimumLeft minimumRight Separated",
+            "case transport\n⊢ GuardTransport Separated",
+            "case merge\n⊢ GuardedCombineContract Separated concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case establish\n⊢ GuardOnSplit minimumLeft minimumRight Separated"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Search exhausted; retain the candidate with fewest open premises.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "unresolved"
+        }
+      ]
+    },
+    {
+      "name": "NoProgress",
+      "expected_unproved_premise": "SplitContract rawMinimumLeft rawMinimumRight",
+      "events": [
+        {
+          "candidate": "",
+          "detail": "Start finite candidate search.",
+          "goals": [
+            "⊢ SchemeRequirements rawMinimumLeft rawMinimumRight concatenate"
+          ],
+          "stage": "attempt"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract rawMinimumLeft rawMinimumRight",
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case split\n⊢ SplitContract rawMinimumLeft rawMinimumRight",
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract rawMinimumLeft rawMinimumRight",
+            "case establish\n⊢ GuardOnSplit rawMinimumLeft rawMinimumRight Separated",
+            "case transport\n⊢ GuardTransport Separated",
+            "case merge\n⊢ GuardedCombineContract Separated concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case split\n⊢ SplitContract rawMinimumLeft rawMinimumRight"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Search exhausted; retain the candidate with fewest open premises.",
+          "goals": [
+            "case split\n⊢ SplitContract rawMinimumLeft rawMinimumRight"
+          ],
+          "stage": "unresolved"
+        }
+      ]
+    },
+    {
+      "name": "UntrustedFact",
+      "expected_unproved_premise": "CombineContract concatenate",
+      "events": [
+        {
+          "candidate": "",
+          "detail": "Start finite candidate search.",
+          "goals": [
+            "⊢ SchemeRequirements leftHalf rightHalf concatenate"
+          ],
+          "stage": "attempt"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract leftHalf rightHalf",
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Generated obligations; no premise is assumed true.",
+          "goals": [
+            "case split\n⊢ SplitContract leftHalf rightHalf",
+            "case establish\n⊢ GuardOnSplit leftHalf rightHalf Separated",
+            "case transport\n⊢ GuardTransport Separated",
+            "case merge\n⊢ GuardedCombineContract Separated concatenate"
+          ],
+          "stage": "candidate"
+        },
+        {
+          "candidate": "separated",
+          "detail": "Unproved premises; this is not a refutation of the candidate.",
+          "goals": [
+            "case establish\n⊢ GuardOnSplit leftHalf rightHalf Separated",
+            "case merge\n⊢ GuardedCombineContract Separated concatenate"
+          ],
+          "stage": "candidate_unresolved"
+        },
+        {
+          "candidate": "unconditional",
+          "detail": "Search exhausted; retain the candidate with fewest open premises.",
+          "goals": [
+            "case merge\n⊢ CombineContract concatenate"
+          ],
+          "stage": "unresolved"
+        }
+      ]
+    }
+  ],
+  "audited_theorems": [
+    {
+      "theorem": "LazyThinking.joint_of_contracts",
+      "axioms": []
+    },
+    {
+      "theorem": "LazyThinking.scheme_of_contracts",
+      "axioms": []
+    },
+    {
+      "theorem": "LazyThinking.sortUsing_correct",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.halfSplit_contract",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.mergeNat_contract",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.mergeSort_correct",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.separation_survives",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.joint_of_guarded_contracts",
+      "axioms": []
+    },
+    {
+      "theorem": "LazyThinking.scheme_of_guarded_contracts",
+      "axioms": []
+    },
+    {
+      "theorem": "LazyThinking.separation_transport",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.concatenate_guarded_contract",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.minimumValue_mem",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.minimumValue_le",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.minimumSplit_contract",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.minimumSplit_separated",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.selectedMergeRequirements",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.selectedMinimumRequirements",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.minimumPartitionSort_correct",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.halfSplit_concat_wrong",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.rawMinimum_contents",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.rawMinimum_separated",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.rawMinimum_does_not_decrease",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "LazyThinking.lengths_and_sortedness_are_insufficient",
+      "axioms": []
+    }
+  ],
+  "allowed_foundational_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_sha256": {
+    "Audit.lean": "4ed23eaa7c57b2ee69ffb40446dc80f8f1759b52f184c91c4167a40e760adea4",
+    "Examples.lean": "231daad4eff62657c795d23f6f79f9e19358259a835fb61ac9143bc1bedd629a",
+    "Experiments.lean": "592bae8df8a76cfd752519182097e1d776f2325a9b2b837d938d3d83df572de0",
+    "LazyThinking/Candidates.lean": "bcae4fc55a45fd5cc00181bf994df5bc5af6a82f3edd3bca2a2ef890e020d4ad",
+    "LazyThinking/Decomposition.lean": "42e8b6cc414ccebb708d2cb346a9563e47d883483de569e919e95ae77d64ad7a",
+    "LazyThinking/DerivedPrograms.lean": "3cfee8dbbd3bec181258e3db78846c1c9bf86e3f2693eae7b589f6500317a7a0",
+    "LazyThinking/Diagnostics.lean": "1298e4a61b404b878f66e5cd056b8ec52f4b8703c477058cbf70ecf8773f1733",
+    "LazyThinking/Evidence.lean": "fcdfecf30419c27831ca4934777c09c5eead0cb985a36f2916343dddfd2fb2be",
+    "LazyThinking/Guards.lean": "ab7067a8e7ed032f9d478a2181802dd3c98139f506729f0548184a7df1b588eb",
+    "LazyThinking/MinimumSplit.lean": "c618c629827d8282b744c27d735f875aefe1496ae457306da23a6f9c22efcd0d",
+    "LazyThinking/Scheme.lean": "9dd798dcfd1a40072273d6615ef175f21d56e0cffc426bf9e0847cf099efdf6a",
+    "LazyThinking/Search.lean": "53616b4b5d922213049cace862aaca5198ce338a664b2e3427c88e0dfb15c69f",
+    "LazyThinking/Spec.lean": "3fbde10e6bb3c8747e2f55944416cb7d7b01936ca4e16599f523b554becb2052",
+    "LazyThinking/Tactic.lean": "9ea0a63036cc42280ea2083232354182cfe35f9c19ca9ca57577cb9effee89ae",
+    "LazyThinking/Witness.lean": "d913d48a1f0098dc186fa5ef81ecd51fcd80765e05e8133bbfef6c80da21f4c5",
+    "LazyThinking.lean": "4f0e7c221bce0691fe9cf1daf9447dca3ddaaeb2db6975df601e0e0d87c95f19",
+    "Main.lean": "9413d9d6ed110372441f85f34afe1d352df0048820f4e290cacdeb815d5cedc1",
+    "Tests.lean": "afa043edb5c70b8b9b69023a4066a86908627f5190c00df8efc9e3df9fcc8d62",
+    "tests/BadCombine.lean": "3e7177492831a63277d2ecd4660fc8ae5b8dde06aa851d7f27917d4be882f70e",
+    "tests/FixedBaseline.lean": "866b15036503828e6ecaae07add1bf478fe5e8ee3ed9cc9fc30be62737e5a0a8",
+    "tests/MissingSplitGuard.lean": "451049fa87db7c1945c114c2f98b68545d617d9631b449e5cd1d758b2e4f6d0c",
+    "tests/NoProgress.lean": "f9a8c5fa68fba130edb4dd6d7f47a3a841323be64c0ee8e9381f4d3d2acc2ad7",
+    "tests/NoTransport.lean": "cc0df283dae599d62dee677e619fe20d89ba3f8ab6bb7f366685f15b3c496a49",
+    "tests/PlainOnly.lean": "64315410c19e6b96a6812d0f263f28bd2c845cb8203d65d4b44eaa544c0f702e",
+    "tests/UnknownHelpers.lean": "a503d90ef37d182a9248ecf046515257d8d5d157343f5b503833e21ddc926719",
+    "tests/UntrustedFact.lean": "ef71aa2b0b918ea26a94548d1dbf526cbad2401a4bf1a5d0e3ca5d94f990a6f2"
+  }
+}

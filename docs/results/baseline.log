@@ -1,0 +1,7 @@
+[LazyThinking] {"detail":"Try assumptions and logical simplification without new requirements.","goals":["⊢ SchemeRequirements leftHalf rightHalf mergeNat"],"stage":"attempt"}
+[LazyThinking] {"detail":"The bounded proof attempt did not establish the joint requirement.","goals":["⊢ SchemeRequirements leftHalf rightHalf mergeNat"],"stage":"stalled"}
+[LazyThinking] {"detail":"Apply the supplied concatenation/permutation decomposition rule.","goals":["case split\n⊢ SplitContract leftHalf rightHalf","case merge\n⊢ CombineContract mergeNat"],"stage":"requirements"}
+[LazyThinking] {"detail":"Requirements discharged using local assumptions or supplied witnesses.","goals":[],"stage":"complete"}
+'inferredMergeSortRequirements' depends on axioms: [propext, Quot.sound]
+'inferredMergeSortCorrect' depends on axioms: [propext, Quot.sound]
+[1, 2, 2, 3, 4, 5, 6]
